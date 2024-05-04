@@ -11,8 +11,9 @@ provides an interactive UI to view your projects, run tasks, generate code, and 
 comes with a LSP for Vim users.
 
 ## Start the application
+Install packages by `yarn`
 
-Run `npx nx serve web` to start the development server. Happy coding!
+Run `yarn start:web` to start the development server. Happy coding!
 
 ## Build for production
 
