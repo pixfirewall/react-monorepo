@@ -1,0 +1,31 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "noPropertyAccessFromIndexSignature": false,
+    "lib": ["es2020", "dom"],
+    "jsx": "react",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@slicesoft-core/boot": ["core/boot/src/index.ts"],
+      "@slicesoft-core/gateway": ["core/gateway/src/index.ts"],
+      "@slicesoft-core/router": ["core/router/src/index.ts"],
+      "@slicesoft-core/store": ["core/store/src/index.ts"],
+      "@slicesoft-core/types": ["core/types/src/index.ts"],
+      "@slicesoft-features/home": ["features/home/src/index.ts"],
+      "@slicesoft-core/redux": ["core/redux/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
