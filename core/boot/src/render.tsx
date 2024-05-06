@@ -1,18 +1,34 @@
 import React from 'react'
-import { ConfigProvider } from 'antd'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, router } from '@slicesoft-core/router'
 import { store } from '@slicesoft-core/store'
 import { Provider } from '@slicesoft-core/redux'
+import { ThemeProvider, createTheme } from '@mui/material'
+
+import '@fontsource/roboto/300.css'
+import '@fontsource/roboto/400.css'
+import '@fontsource/roboto/500.css'
+import '@fontsource/roboto/700.css'
+
+// doc: https://mui.com/material-ui/customization/theming
+const theme = createTheme({
+  components: {
+    MuiButtonBase: {
+      defaultProps: {
+        disableRipple: true,
+      },
+    },
+  },
+})
 
 export const render = () => {
   const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
   return root.render(
     <React.StrictMode>
       <Provider store={store}>
-        <ConfigProvider theme={{ token: { colorPrimary: '#00b96b' } }}>
+        <ThemeProvider theme={theme}>
           <RouterProvider router={router} />
-        </ConfigProvider>
+        </ThemeProvider>
       </Provider>
     </React.StrictMode>,
   )

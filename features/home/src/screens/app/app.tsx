@@ -1,7 +1,8 @@
 import React from 'react'
-import { Button } from 'antd'
+import { Button, Box, Text, Link, Image } from '@slicesoft-packages/ui'
 
-import './App.css'
+import './styles/App.css'
+
 import logo from './logo.svg'
 import { useNavigateToHome } from '../../navigations'
 
@@ -9,19 +10,15 @@ export const App = () => {
   const navigateToHome = useNavigateToHome()
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+    <Box className="App">
+      <Box className="App-header">
+        <Image src={logo} className="App-logo" alt="logo" />
+        <Text variant="h4">Edit `src/App.tsx` and save to reload.</Text>
+        <Link className="App-link" href="https://reactjs.org" target="_blank">
           Learn React
-        </a>
-        <Button type="primary" onClick={() => navigateToHome()}>
-          Button
-        </Button>
-      </header>
-    </div>
+        </Link>
+        <Button variant="contained" onClick={() => navigateToHome()}>Hello world</Button>
+      </Box>
+    </Box>
   )
 }

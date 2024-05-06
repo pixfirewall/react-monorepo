@@ -20,11 +20,12 @@
     "paths": {
       "@slicesoft-core/boot": ["core/boot/src/index.ts"],
       "@slicesoft-core/gateway": ["core/gateway/src/index.ts"],
+      "@slicesoft-core/redux": ["core/redux/src/index.ts"],
       "@slicesoft-core/router": ["core/router/src/index.ts"],
       "@slicesoft-core/store": ["core/store/src/index.ts"],
       "@slicesoft-core/types": ["core/types/src/index.ts"],
       "@slicesoft-features/home": ["features/home/src/index.ts"],
-      "@slicesoft-core/redux": ["core/redux/src/index.ts"]
+      "@slicesoft-packages/ui": ["packages/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
